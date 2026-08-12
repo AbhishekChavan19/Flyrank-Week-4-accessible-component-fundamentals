@@ -1,32 +1,52 @@
-# React + TypeScript + Vite
+# FE-05 — Accessible Component Fundamentals
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + TypeScript accessibility component playground built as part of the **Frontend AI Engineering** internship at **Flyrank.ai**.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project demonstrates the implementation of three interactive accessible components built from scratch without using component libraries:
 
-## React Compiler
+- **Modal Dialog**
+- **Tabs**
+- **Disclosure / Accordion**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The goal of this assignment was to understand the accessibility fundamentals behind interactive UI components, including ARIA semantics, keyboard interaction, focus management, and focus restoration.
 
-## Expanding the Oxlint configuration
+The project also includes generated **shadcn/ui** Dialog and Tabs components for source-code comparison and accessibility analysis.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+---
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Tech Stack
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Radix UI primitives
+- Lucide React
+
+---
+
+## Project Structure
+
+```text
+src/
+├── playground/
+│   └── components/
+│       └── custom/
+│           ├── Modal.tsx
+│           ├── Tabs.tsx
+│           └── Disclosure.tsx
+│
+├── components/
+│   └── ui/
+│       ├── dialog.tsx
+│       └── tabs.tsx
+│
+└── ...
+
+NOTES.md
+README.md
+package.json
+tsconfig.json
